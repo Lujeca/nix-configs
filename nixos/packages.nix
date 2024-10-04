@@ -1,121 +1,86 @@
 { pkgs, ... }: {
   nixpkgs.config = {
+    # Allow unfree packages
     allowUnfree = true;
-    permittedInsecurePackages = ["python-2.7.18.8" "electron-25.9.0"];
   };
 
   environment.systemPackages = with pkgs; [
-    # Desktop apps
-    audacity
-    chromium
-    telegram-desktop
-    alacritty
-    obs-studio
-    rofi
-    wofi
-    mpv
+    # Desktop applications
+    blackbox-terminal
+    clapper
+    easyeffects
+    floorp
+    fragments
+    gnome.dconf-editor
+    gnome.gnome-tweaks
+    inkscape
     kdenlive
-    discord
+    krita
+    mission-center
+    onlyoffice-bin_latest
+    protonplus
+    protontricks
+    tenacity
+    tor-browser
+    vscodium
     gparted
-    obsidian
-    zoom-us
-    pcmanfm-qt
-    polymc
 
-    # Coding stuff
-    gnumake
+    # Extensions
+    gnomeExtensions.appindicator
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.caffeine
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.just-perfection
+
+    # Development tools
+    android-tools
+    clang
+    clang-tools
+    cargo
+    dotnet-sdk_8
     gcc
-    nodejs
-    python
-    (python3.withPackages (ps: with ps; [ requests ]))
+    gnumake
+    mono
+    python312
+    python312Packages.pip
+    rustc
+    zulu
 
-    # CLI utils
-    neofetch
-    file
-    tree
-    wget
-    git
+    # CLI utilities
+    aria2
+    bat
+    bind
+    curl
     fastfetch
-    htop
-    nix-index
-    unzip
-    scrot
     ffmpeg
-    light
-    lux
-    mediainfo
-    ranger
-    zram-generator
-    cava
-    zip
-    ntfs3g
-    yt-dlp
-    brightnessctl
-    swww
+    file
+    git
+    inxi
+    ipset
+    lshw
+    neovim
     openssl
-    lazygit
-    bluez
-    bluez-tools
+    onefetch
+    radare2
+    tree
+    tldr
+    unzip
+    wget
+    zip
 
-    # GUI utils
-    feh
-    imv
-    dmenu
-    screenkey
-    mako
-    gromit-mpx
+    # Icon themes
+    adw-gtk3
+    tela-circle-icon-theme
 
-    # Xorg stuff
-    #xterm
-    #xclip
-    #xorg.xbacklight
-
-    # Wayland stuff
-    xwayland
-    wl-clipboard
-    cliphist
-
-    # WMs and stuff
-    herbstluftwm
-    hyprland
-    seatd
-    xdg-desktop-portal-hyprland
-    polybar
-    waybar
-
-    # Sound
-    pipewire
-    pulseaudio
-    pamixer
-
-    # GPU stuff 
-    amdvlk
-    rocm-opencl-icd
-    glaxnimate
-
-    # Screenshotting
-    grim
-    grimblast
-    slurp
-    flameshot
-    swappy
-
-    # Other
+    # Other packages
     home-manager
-    spice-vdagent
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
-    papirus-nord
+    nix-index
+    zram-generator
   ];
 
+  # Font packages
   fonts.packages = with pkgs; [
     jetbrains-mono
-    noto-fonts
-    noto-fonts-emoji
-    twemoji-color-font
-    font-awesome
-    powerline-fonts
-    powerline-symbols
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+    meslo-lgs-nf
   ];
 }

@@ -1,4 +1,4 @@
-{ inputs, ...}: {
+{ inputs, ... }: {
   imports = [
     ./hardware-configuration.nix
     ./packages.nix
@@ -6,18 +6,31 @@
   ];
 
   disabledModules = [
-    ./modules/xserver.nix
+    ./modules/qemuguest.nix
+    ./modules/tlp.nix
   ];
-
-  nixpkgs.overlays = [ inputs.polymc.overlay ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
-  time.timeZone = "Asia/Tashkent"; # Set your time zone.
+  # Set your time zone.
+  time.timeZone = "Europe/Moscow";
 
-  i18n.defaultLocale = "en_US.UTF-8"; # Select internationalisation properties.
+  # Select internationalisation properties.
+  i18n.defaultLocale = "ru_RU.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS        = "ru_RU.UTF-8";
+    LC_IDENTIFICATION = "ru_RU.UTF-8";
+    LC_MEASUREMENT    = "ru_RU.UTF-8";
+    LC_MONETARY       = "ru_RU.UTF-8";
+    LC_NAME           = "ru_RU.UTF-8";
+    LC_NUMERIC        = "ru_RU.UTF-8";
+    LC_PAPER          = "ru_RU.UTF-8";
+    LC_TELEPHONE      = "ru_RU.UTF-8";
+    LC_TIME           = "ru_RU.UTF-8";
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
 
-  system.stateVersion = "23.05"; # Don't change it bro
+  system.stateVersion = "24.05"; # Don't change it bro
 }

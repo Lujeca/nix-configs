@@ -1,18 +1,15 @@
 {
   hardware.pulseaudio.enable = false;
-  sound.enable = true;
 
-  # rtkit is optional but recommended
-  security.rtkit.enable = true;
+  security.rtkit.enable = true; # Recommended
 
   services.pipewire = {
     enable = true;
+    alsa.enable = true;       # ALSA support
+    alsa.support32Bit = true; # 32-bit apps support
+    pulse.enable = true;      # PulseAudio support
 
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    # Uncomment for JACK
+    jack.enable = true;
   };
 }

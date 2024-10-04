@@ -1,7 +1,8 @@
 {
   programs.git = {
-    enable = true;
-    userName  = "Andrey0189";
-    userEmail = "varnavsky06@gmail.com";
+    enable = true; # Enable Git support
+
+    userName  = "<username>";           # Specify the username for Git
+    userEmail = "<email@example.com>";  # Specify the email address for Git
   };
 }

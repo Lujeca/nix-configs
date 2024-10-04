@@ -1,16 +1,20 @@
 {
   imports = [
-    ./bootloader.nix
-    ./sound.nix
-    ./zram.nix
-    ./env.nix
-    ./user.nix
-    ./xserver.nix
-    ./nm.nix
-    ./virtmanager.nix
-    ./hyprland.nix
-    ./trim.nix
-    ./bluetooth.nix
-    ./nixvim/nixvim.nix
+    ./bootloader.nix  # Bootloader configuration
+    ./trim.nix        # Trim configuration
+    ./zram.nix        # ZRAM configuration
+    ./nm.nix          # NetworkManager configuration
+    ./sound.nix       # Sound configuration
+    ./printing.nix    # Printing configuration
+    ./xserver.nix     # Windowing system configuration
+    ./gexclude.nix    # General exclusions
+    ./nvidia.nix      # NVIDIA driver configuration
+    ./user.nix        # User accounts and permissions
+    ./env.nix         # Environment settings
+    ./virtmanager.nix # Virtual Machine Manager configuration
+    ./qemuguest.nix   # QEMU guest configuration
+    ./steam.nix       # Steam configuration
+    ./tlp.nix         # TLP (Laptop Mode Tools) configuration
+    ./flatpak.nix     # Flatpak configuration
   ];
 }

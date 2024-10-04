@@ -1,8 +1,8 @@
 {
   zramSwap = {
-    enable = true;
-    algorithm = "lz4";
-    memoryPercent = 100;
-    priority = 999;
+    enable        = true;   # Enable ZRAM swap
+    algorithm     = "lz4";  # Compression algorithm
+    memoryPercent = 100;    # Percentage of memory to use for ZRAM
+    priority      = 999;    # Priority of the ZRAM swap
   };
 }

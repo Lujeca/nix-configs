@@ -1,17 +1,16 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
+  # Enable Zsh
   programs.zsh.enable = true;
 
   users = {
+    # Default shell
     defaultUserShell = pkgs.zsh;
 
-    users.amper = {
+    users.<username> = {
       isNormalUser = true;
-      description = "Ampersand";
-      extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" ];
-      packages = with pkgs; [];
+      description = "<username>";
+      extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+      packages = with pkgs-unstable; [ obsidian r2modman vesktop ];
     };
   };
-
-  # Enable automatic login for the user.
-  services.getty.autologinUser = "amper";
 }

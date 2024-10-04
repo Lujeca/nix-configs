@@ -1,12 +1,18 @@
-# ❄️ My NixOS Config
+# ❄️ My NixOS Workstation Config ![Nix](https://img.shields.io/badge/This_is-Nix-blue?logo=NixOS)
+
+Don't forget to change `<username>` and `<email@example.com>` in [./home-manager/modules/git.nix](home-manager/modules/git.nix)
 
 ```bash
-git clone https://github.com/Andrey0189/nixos-config
-mv nixos-config $HOME/nix # Config is supposed to be in the ~/nix directory
-cd $HOME/nix
-sudo nixos-rebuild switch --flake .
-home-manager switch --flake .
+git clone https://github.com/TheIIIrd/nixos-custom-workstation.git ~/.nix && cd ~/.nix
 ```
-Enjoy!
 
-![Screenshot](./screenshot.png)
+```bash
+cp --no-preserve=mode /etc/nixos/hardware-configuration.nix ~/.nix/nixos/
+sed -i "s/<username>/$USER/g" ~/.nix/flake.nix && sed -i "s/<username>/$USER/g" ~/.nix/nixos/modules/user.nix && sed -i "s/<username>/$USER/g" ~/.nix/home-manager/home.nix
+```
+
+```bash
+git add .
+sudo nixos-rebuild boot --upgrade --flake .
+home-manager switch -b backup --flake .
+```

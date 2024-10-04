@@ -1,26 +1,18 @@
 {
   services.xserver = {
     enable = true;
-    windowManager.herbstluftwm.enable = true;
 
-    # displayManager = {
-    #   autoLogin.enable = true;
-    #   autoLogin.user = "amper";
-    #   lightdm.enable = true;
-    # };
+    displayManager.gdm.enable = true;   # Enable GDM display manager
+    desktopManager.gnome.enable = true; # Enable GNOME desktop environment
 
-    layout = "us";
-    xkbVariant = "";
-
-    libinput = {
-      enable = true;
-      mouse.accelProfile = "flat";
-      touchpad.accelProfile = "flat";
+    xkb = {
+      layout = "us";  # Set keyboard layout to US
+      variant = "";   # Keyboard variant (default)
     };
 
-    videoDrivers = [ "amdgpu" ];
-    deviceSection = ''Option "TearFree" "True"'';
-    #displayManager.gdm.enable = true;
-    #desktopManager.gnome.enable = true;
+    # Enable touchpad support (enabled by default in most desktop managers)
+    # services.xserver.libinput.enable = true;
+
+    videoDrivers = [ "nvidia" ];  # Specify video drivers
   };
 }
