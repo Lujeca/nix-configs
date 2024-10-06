@@ -33,10 +33,10 @@
     gnomeExtensions.just-perfection
 
     # Development tools
+    cargo
     android-tools
     clang
     clang-tools
-    cargo
     dotnet-sdk_8
     gcc
     gnumake
