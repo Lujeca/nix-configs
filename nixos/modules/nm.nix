@@ -8,10 +8,10 @@
 
     # Set DNS nameservers to Cloudflare's for faster resolution
     nameservers = [ "1.1.1.1" "1.0.0.1" ];
-  };
 
-  firewall = {
-    enable = true;
-    allowPing = false;
+    firewall = {
+      enable = true;
+      allowPing = false;
+    };
   };
 }

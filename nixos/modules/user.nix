@@ -10,7 +10,12 @@
       isNormalUser = true;
       description = "<username>";
       extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-      packages = with pkgs-unstable; [ element-desktop obsidian r2modman vesktop ];
+      packages = with pkgs-unstable; [ 
+        element-desktop
+        obsidian
+        r2modman
+        vesktop
+        ];
     };
   };
 }

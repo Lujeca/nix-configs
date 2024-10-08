@@ -7,6 +7,7 @@
 
   disabledModules = [
     ./modules/qemuguest.nix
+    ./modules/zerotierone.nix
     ./modules/tlp.nix
   ];
 
