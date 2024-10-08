@@ -40,6 +40,7 @@
     dotnet-sdk_8
     gcc
     gnumake
+    meson
     mono
     python312
     python312Packages.pip
