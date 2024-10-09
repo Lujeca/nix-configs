@@ -1,6 +1,6 @@
 # ❄️ My NixOS Workstation Config ![Nix](https://img.shields.io/badge/This_is-Nix-blue?logo=NixOS)
 
-Don't forget to change `<username>` and `<email@example.com>` in [./home-manager/modules/git.nix](home-manager/modules/git.nix)
+Don't forget to change `<username>` and `<email@example.com>` in [./home-manager/modules/git.nix](home-manager/modules/git.nix). Also check `disabledModules` in [./nixos/configuration.nix](./nixos/configuration.nix).
 
 ```bash
 git clone https://github.com/TheIIIrd/nixos-custom-workstation.git ~/.nix && cd ~/.nix

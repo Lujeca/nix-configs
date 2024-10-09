@@ -8,6 +8,7 @@
   disabledModules = [
     ./modules/qemuguest.nix
     ./modules/zerotierone.nix
+    ./modules/tailscale.nix
     ./modules/tlp.nix
   ];
 

@@ -34,17 +34,17 @@
 
     # Development tools
     android-tools
-    cargo
+    python312
+    python312Packages.pip
     clang
     clang-tools
-    dotnet-sdk_8
     gcc
     gnumake
     meson
-    mono
-    python312
-    python312Packages.pip
+    cargo
     rustc
+    dotnet-sdk_8
+    mono
     zulu
 
     # CLI utilities

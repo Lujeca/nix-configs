@@ -14,6 +14,7 @@
     ./virtmanager.nix # Virtual Machine Manager configuration
     ./qemuguest.nix   # QEMU guest configuration
     ./zerotierone.nix # ZeroTier One settings
+    ./tailscale.nix   # Tailscale settings
     ./steam.nix       # Steam configuration
     ./tlp.nix         # TLP (Laptop Mode Tools) configuration
     ./flatpak.nix     # Flatpak configuration
