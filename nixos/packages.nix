@@ -4,12 +4,13 @@
     allowUnfree = true;
   };
 
+  programs.firefox.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Desktop applications
     blackbox-terminal
     clapper
     easyeffects
-    floorp
     fragments
     gnome.dconf-editor
     gnome.gnome-tweaks
@@ -22,6 +23,7 @@
     protontricks
     tenacity
     tor-browser
+    ungoogled-chromium
     vscodium
     gparted
 
