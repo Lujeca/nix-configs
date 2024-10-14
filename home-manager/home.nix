@@ -5,8 +5,8 @@
   ];
 
   home = {
-    username      = "<username>";
-    homeDirectory = "/home/<username>";
+    username      = "<lewker>";
+    homeDirectory = "/home/<lewker>";
     stateVersion  = "24.05";
   };
 }
