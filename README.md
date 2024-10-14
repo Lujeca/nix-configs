@@ -3,12 +3,12 @@
 Don't forget to change `<username>` and `<email@example.com>` in [./home-manager/modules/git.nix](home-manager/modules/git.nix). Also check `disabledModules` in [./nixos/configuration.nix](./nixos/configuration.nix).
 
 ```bash
-git clone https://github.com/TheIIIrd/nixos-custom-workstation.git ~/.nix && cd ~/.nix
+git clone https://github.com/Lujeca/nix-configs.git ~/.nix && cd ~/.nix
 ```
 
 ```bash
 cp --no-preserve=mode /etc/nixos/hardware-configuration.nix ~/.nix/nixos/
-sed -i "s/<username>/$USER/g" ~/.nix/flake.nix && sed -i "s/<username>/$USER/g" ~/.nix/nixos/modules/user.nix && sed -i "s/<username>/$USER/g" ~/.nix/home-manager/home.nix
+sed -i "s/<lewker>/$USER/g" ~/.nix/flake.nix && sed -i "s/<username>/$USER/g" ~/.nix/nixos/modules/user.nix && sed -i "s/<username>/$USER/g" ~/.nix/home-manager/home.nix
 ```
 
 ```bash
