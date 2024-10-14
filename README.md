@@ -8,7 +8,7 @@ git clone https://github.com/Lujeca/nix-configs.git ~/.nix && cd ~/.nix
 
 ```bash
 cp --no-preserve=mode /etc/nixos/hardware-configuration.nix ~/.nix/nixos/
-sed -i "s/<lewker>/$USER/g" ~/.nix/flake.nix && sed -i "s/<username>/$USER/g" ~/.nix/nixos/modules/user.nix && sed -i "s/<lewker>/$USER/g" ~/.nix/home-manager/home.nix
+sed -i "s/<lewker>/$USER/g" ~/.nix/flake.nix && sed -i "s/<lewker>/$USER/g" ~/.nix/nixos/modules/user.nix && sed -i "s/<lewker>/$USER/g" ~/.nix/home-manager/home.nix
 ```
 
 ```bash
