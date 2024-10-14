@@ -16,7 +16,7 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   # Set your time zone.
-  time.timeZone = "Europe/Moscow";
+  time.timeZone = "America/Toronto";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "ru_RU.UTF-8";
