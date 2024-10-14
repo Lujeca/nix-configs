@@ -26,6 +26,7 @@
     ungoogled-chromium
     vscodium
     gparted
+    vivaldi
 
     # Extensions
     gnomeExtensions.appindicator
